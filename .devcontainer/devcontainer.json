@@ -1,0 +1,21 @@
+{
+    "name": "design-circle",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "app",
+    "workspaceFolder": "/design-circle",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "dbaeumer.vscode-eslint",
+                "esbenp.prettier-vscode",
+                "ritwickdey.liveserver",
+                "ms-vscode.live-server"
+            ],
+            "settings": {
+                "editor.formatOnSave": true,
+                "liveServer.settings.port": 5500
+            }
+        }
+    },
+    "forwardPorts": [8080]
+}
