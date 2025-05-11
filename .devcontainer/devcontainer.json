@@ -9,7 +9,8 @@
                 "dbaeumer.vscode-eslint",
                 "esbenp.prettier-vscode",
                 "ritwickdey.liveserver",
-                "ms-vscode.live-server"
+                "ms-vscode.live-server",
+                "saoudrizwan.claude-dev"
             ],
             "settings": {
                 "editor.formatOnSave": true,

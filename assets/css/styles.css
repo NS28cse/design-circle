@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
     --primary-color: #2b2d42;
     --secondary-color: #00b4d8;
@@ -239,4 +240,164 @@ body {
 .about-policy p {
     margin-bottom: 1rem;
     line-height: 1.8;
-} 
+}
+
+/* Teams Grid Styling */
+.teams-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 1rem;
+}
+
+.team-card {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.team-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.team-card p {
+    flex-grow: 1;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.team-link {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: var(--secondary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-align: center;
+    align-self: flex-start;
+}
+
+.team-link:hover {
+    background: var(--accent-color);
+}
+
+/* Team Page Styling */
+.team-header {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('circuit-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 6rem 2rem 4rem;
+    text-align: center;
+    position: relative;
+}
+
+.team-header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px var(--secondary-color);
+}
+
+.team-header p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+.team-content {
+    max-width: 1000px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.team-section {
+    background: white;
+    border-radius: 10px;
+    padding: 3rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-bottom: 3rem;
+}
+
+.team-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.team-section p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.team-activities {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.activity-card {
+    background: var(--background-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.activity-card h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-top: 2rem;
+}
+
+.back-link:hover {
+    background: var(--accent-color);
+    transform: translateX(-5px);
+}
+
+@media (max-width: 768px) {
+    .teams-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .team-header h1 {
+        font-size: 2rem;
+    }
+    
+    .team-section {
+        padding: 2rem;
+    }
+    
+    .team-activities {
+        grid-template-columns: 1fr;
+    }
+}
