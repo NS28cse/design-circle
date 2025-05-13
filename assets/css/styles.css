@@ -20,17 +20,80 @@ body {
     background-color: var(--background-color);
 }
 
+/* Navigation Header */
+.main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.nav-logo {
+    color: white;
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 0.5rem 0;
+}
+
+.nav-link:hover {
+    color: var(--secondary-color);
+}
+
+.nav-link.active {
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+}
+
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('circuit-bg.jpg');
-    background-size: cover;
-    background-position: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
     overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+    z-index: 1;
+}
+
+.hero video,
+.hero img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
 }
 
 .circuit-overlay {
@@ -42,6 +105,7 @@ body {
     background-image: url('circuit-pattern.svg');
     opacity: 0.1;
     animation: circuitMove 20s linear infinite;
+    z-index: 1;
 }
 
 .hero-title {
@@ -52,6 +116,8 @@ body {
     margin-bottom: 1rem;
     font-weight: 800;
     text-shadow: 0 0 10px var(--secondary-color);
+    position: relative;
+    z-index: 2;
 }
 
 .hero-subtitle {
@@ -60,6 +126,8 @@ body {
     text-align: center;
     animation: fadeIn 2s ease-in;
     letter-spacing: 2px;
+    position: relative;
+    z-index: 2;
 }
 
 .hero-scroll-indicator {
@@ -93,6 +161,7 @@ body {
     gap: 2rem;
     animation: fadeInUp 1s ease-out 1s forwards;
     opacity: 0;
+    z-index: 2;
 }
 
 .hero-button {
@@ -299,19 +368,45 @@ body {
 
 /* Team Page Styling */
 .team-header {
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('circuit-bg.jpg');
-    background-size: cover;
-    background-position: center;
+    height: 100vh;
     color: white;
-    padding: 6rem 2rem 4rem;
     text-align: center;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.team-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+    z-index: 1;
+}
+
+.team-header video,
+.team-header img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
 }
 
 .team-header h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
     text-shadow: 0 0 10px var(--secondary-color);
+    position: relative;
+    z-index: 2;
 }
 
 .team-header p {
@@ -319,6 +414,8 @@ body {
     max-width: 800px;
     margin: 0 auto;
     opacity: 0.9;
+    position: relative;
+    z-index: 2;
 }
 
 .team-content {

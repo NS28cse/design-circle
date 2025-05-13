@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,16 +9,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
+    <nav class="main-nav">
+        <a href="index.html" class="nav-logo">設計サークル</a>
+        <div class="nav-links">
+            <a href="#about" class="nav-link">活動方針</a>
+            <a href="sub-html/conceptual.html" class="nav-link">概念設計</a>
+            <a href="sub-html/engineering.html" class="nav-link">工学系設計</a>
+            <a href="sub-html/information.html" class="nav-link">情報系設計</a>
+            <a href="sub-html/design.html" class="nav-link">デザイン系設計</a>
+            <a href="https://forms.office.com/r/HzCWJd7wec" class="nav-link" target="_blank" rel="noopener noreferrer">入部はこちら</a>
+        </div>
+    </nav>
+
     <header class="hero">
         <div class="circuit-overlay"></div>
+        <video autoplay muted loop>
+            <source src="assets/videos/5365-183788430_tiny.mp4" type="video/mp4">
+        </video>
         <h1 class="hero-title">設計サークル</h1>
         <p class="hero-subtitle"></p>
-        <video autoplay muted loop preload>
-            <source src ="assets/videos/5365-183788430_tiny.mp4" type="video/mp4">
-            <source src ="assets/videos/5365-183788430_tiny.webm" type="video/webm">
-        </video>
         <div class="hero-nav">
-            <a href="#join" class="hero-button primary-button">
+            <a href="https://forms.office.com/r/HzCWJd7wec" class="hero-button primary-button" target="_blank" rel="noopener noreferrer">
                 <span class="button-text">入部はこちら</span>
                 <i class="fas fa-arrow-right"></i>
             </a>
@@ -30,60 +41,38 @@
     </header>
 
     <main>
-        <section id="join" class="section">
-            <h2>入部案内</h2>
-            <div class="join-container">
-                <div class="join-info">
-                    <h3>募集要項</h3>
-                    <ul>
-                        <li>対象：全学年</li>
-                        <li>経験：不問（初心者歓迎）</li>
-                        <li>活動日：平日</li>
-                    </ul>
-                    <a href="https://forms.office.com/r/HzCWJd7wec" class="join-button" target="_blank" rel="noopener noreferrer">
-                        <span>入部申し込み</span>
-                        <i class="fas fa-paper-plane"></i>
-                    </a>
-                </div>
-            </div>
-        </section>
-
         <section id="about" class="section">
             <div class="content-wrapper">
                 <div class="about-policy">
                     <h3>活動方針</h3>
-                    
                     <p>ものづくりにおいて最も重要なものは何でしょうか？</p>
-               
-                </div>
-                <div class="teams-grid">
-                    <div class="team-card">
-                        <h3>概念設計</h3>
-                        <p>アイデアの創出から始まり、コンセプトの開発と検証を行います。</p>
-                        <a href="assets/sub-html/conceptual.html" class="team-link">詳細を見る</a>
-                    </div>
-                    <div class="team-card">
-                        <h3>工学系設計</h3>
-                        <p>機械、電気、構造などの工学的な設計と実装を行います。</p>
-                        <a href="assets/sub-html/engineering.html" class="team-link">詳細を見る</a>
-                    </div>
-                    <div class="team-card">
-                        <h3>情報系設計</h3>
-                        <p>ソフトウェア、アルゴリズム、データ構造の設計と開発を行います。</p>
-                        <a href="assets/sub-html/information.html" class="team-link">詳細を見る</a>
-                    </div>
-                    <div class="team-card">
-                        <h3>デザイン系設計</h3>
-                        <p>UI/UX、グラフィック、プロダクトデザインなどの視覚的・体験的設計を行います。</p>
-                        <a href="assets/sub-html/design.html" class="team-link">詳細を見る</a>
-                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="schedule" class="section">
-            <div class="schedule-grid">
-                <div class="schedule-item">
+        <section id="teams" class="section">
+            <div class="content-wrapper">
+                <div class="teams-grid">
+                    <div class="team-card">
+                        <h3>概念設計</h3>
+                        <p>アイデアの創出から始まり、コンセプトの開発と検証を行います。</p>
+                        <a href="sub-html/conceptual.html" class="team-link">詳細を見る</a>
+                    </div>
+                    <div class="team-card">
+                        <h3>工学系設計</h3>
+                        <p>機械、電気、構造などの工学的な設計と実装を行います。</p>
+                        <a href="sub-html/engineering.html" class="team-link">詳細を見る</a>
+                    </div>
+                    <div class="team-card">
+                        <h3>情報系設計</h3>
+                        <p>ソフトウェア、アルゴリズム、データ構造の設計と開発を行います。</p>
+                        <a href="sub-html/information.html" class="team-link">詳細を見る</a>
+                    </div>
+                    <div class="team-card">
+                        <h3>デザイン系設計</h3>
+                        <p>UI/UX、グラフィック、プロダクトデザインなどの視覚的・体験的設計を行います。</p>
+                        <a href="sub-html/design.html" class="team-link">詳細を見る</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -92,4 +81,3 @@
     <script src="assets/js/script.js"></script>
 </body>
 </html>
-
