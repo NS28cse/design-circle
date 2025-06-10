@@ -1,7 +1,7 @@
 @charset "UTF-8";
 :root {
     --primary-color: #2b2d42;
-    --secondary-color: #00b4d8;
+    --secondary-color: #00d836;
     --accent-color: #7209b7;
     --text-color: #2b2d42;
     --background-color: #f8f9fa;
@@ -22,16 +22,13 @@ body {
 
 /* Navigation Header */
 .main-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
+    position: static;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.8);
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 1000;
     backdrop-filter: blur(5px);
 }
 
